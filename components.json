@@ -1,0 +1,16 @@
+{
+  "style": "default",
+  "typescript": true,
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "app/assets/index.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "framework": "vite",
+  "aliases": {
+    "components": "./app/components",
+    "utils": "./app/lib/utils"
+  },
+  "tsConfigPath": "./.nuxt/tsconfig.json"
+}

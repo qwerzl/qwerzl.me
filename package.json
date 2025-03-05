@@ -1,0 +1,39 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.5.2",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.10.3",
+    "@nuxt/icon": "^1.10.3",
+    "@nuxt/image": "^1.9.0",
+    "nuxt": "^3.15.4",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.5.1",
+    "@iconify-json/material-symbols": "^1.2.15",
+    "@unocss/eslint-plugin": "^66.0.0",
+    "@unocss/nuxt": "^66.0.0",
+    "eslint": "9.21.0",
+    "typescript": "^5.8.2",
+    "unocss": "^66.0.0",
+    "unocss-preset-animations": "^1.1.1",
+    "unocss-preset-shadcn": "^0.3.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "vue-demi"
+    ]
+  }
+}
