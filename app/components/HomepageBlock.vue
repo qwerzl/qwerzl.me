@@ -18,7 +18,7 @@ const props = defineProps<{
       <em class="">> </em>
       <em class="ml-2 underline opacity-80">{{ props.title }}</em>
     </div>
-    <div class="col-start-1 row-start-1 mt-3 h-full items-center border rounded block-shadow">
+    <div class="block-shadow col-start-1 row-start-1 mt-3 h-full items-center border rounded">
       <div class="relative z-30 h-full px-4 pb-2 pt-6 space-y-4">
         <div v-if="props.items === undefined" class="h-full flex select-none items-center justify-center text-foreground/70">
           <div><em>Coming soon...</em></div>

@@ -5,6 +5,10 @@ onMounted(() => {
     left: homepageBlocks.value.scrollWidth / 2 - homepageBlocks.value.clientWidth / 2,
   })
 })
+
+useHead({
+  title: 'Home | qwerzl\'s Site',
+})
 </script>
 
 <template>
@@ -12,10 +16,10 @@ onMounted(() => {
     <div class="w-full">
       <div class="w-full flex justify-center px-6">
         <div>
-          <div class="select-none" data-animate>
+          <div class="select-none" data-animate style="--stagger: 0;">
             <em>Tom Tang</em>
           </div>
-          <div class="mt-12" data-animate>
+          <div class="mt-12" data-animate style="--stagger: 1;">
             <p>
               Student, Developer, Nuxt.js Ecosystem Member.
             </p>
@@ -35,7 +39,12 @@ onMounted(() => {
           <Icon name="material-symbols:chevron-right" class="absolute right-2 top-1/2 z-50 border rounded-full" @click="homepageBlocks?.scrollBy({left: 320, behavior: 'smooth'})" />
         </div>
         <div class="scroll-area h-full w-screen flex justify-center overflow-x-hidden">
-          <div class="no-scrollbar h-full flex snap-x overflow-x-scroll px-1/3 space-x-8 min-[68rem]:px-0" ref="homepageBlocks" data-animate>
+          <div
+            class="no-scrollbar h-full flex snap-x overflow-x-scroll px-1/3 space-x-8 min-[68rem]:px-0" 
+            ref="homepageBlocks" 
+            data-animate 
+            style="--stagger: 2;"
+          >
             <HomepageBlock
               title="researches" 
               class="snap-center"
@@ -71,6 +80,7 @@ onMounted(() => {
   -webkit-mask-image: linear-gradient(to right,transparent 0,#000 var(--gradient-size-start),#000 calc(100% - var(--gradient-size-end)),transparent 100%);
   mask-image: linear-gradient(to right,transparent 0,#000 var(--gradient-size-start),#000 calc(100% - var(--gradient-size-end)),transparent 100%);
 }
+
 @keyframes enter {
   0% {
     opacity: 0;
@@ -81,6 +91,7 @@ onMounted(() => {
     transform: none;
   }
 }
+
 [data-animate] {
   animation: enter .6s both;
   animation-delay: calc(var(--stagger) * var(--delay) + var(--start));
@@ -88,9 +99,11 @@ onMounted(() => {
   --delay: 120ms;
   --start: 150ms;
 }
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

@@ -26,8 +26,7 @@
     "eslint": "9.21.0",
     "typescript": "^5.8.2",
     "unocss": "^66.0.0",
-    "unocss-preset-animations": "^1.1.1",
-    "unocss-preset-shadcn": "^0.3.2"
+    "unocss-preset-animations": "^1.1.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
