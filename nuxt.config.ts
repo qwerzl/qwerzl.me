@@ -11,12 +11,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: [
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@unocss/nuxt',
-    '@nuxt/icon'
-  ],
+  modules: ['@nuxt/fonts', '@nuxt/image', '@unocss/nuxt', '@nuxt/icon', '@nuxt/content', '@vueuse/nuxt'],
   future: {
     compatibilityVersion: 4,
   },
@@ -24,6 +19,20 @@ export default defineNuxtConfig({
     tsConfig: {
       compilerOptions: {
         baseUrl: '.'
+      }
+    }
+  },
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            // Default theme (same as single string)
+            default: 'github-light',
+            // Theme used if `html.dark`
+            dark: 'github-dark',
+          }
+        }
       }
     }
   }

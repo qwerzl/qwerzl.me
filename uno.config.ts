@@ -1,11 +1,12 @@
-import { defineConfig, presetUno, transformerDirectives } from 'unocss'
+import { defineConfig, presetWind3, transformerDirectives } from 'unocss'
 import presetAnimations from 'unocss-preset-animations'
 
 export default defineConfig({
   theme: {
     fontFamily: {
       serif: 'Newsreader',
-      sans: 'Inter'
+      sans: 'Inter',
+      mono: 'IBM Plex Mono'
     },
     colors: {
       border: 'hsl(var(--border))',
@@ -50,8 +51,8 @@ export default defineConfig({
     },
   },
   presets: [
-    presetUno(),
-    presetAnimations(),
+    presetWind3(),
+    presetAnimations()
   ],
   transformers: [
     transformerDirectives(),

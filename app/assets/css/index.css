@@ -97,10 +97,6 @@
   }
 }
 
-a {
-  @apply underline duration-240 decoration-foreground/40 hover:decoration-foreground underline-offset-2;
-}
-
 em {
   @apply font-serif text-[17px];
 }

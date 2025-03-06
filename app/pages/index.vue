@@ -108,4 +108,8 @@ useHead({
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+a {
+  @apply underline duration-240 decoration-foreground/40 hover:decoration-foreground underline-offset-2;
+}
 </style>

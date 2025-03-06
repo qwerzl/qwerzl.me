@@ -12,9 +12,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@nuxt/content": "^3.3.0",
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.9.0",
+    "@vueuse/core": "^12.8.2",
+    "@vueuse/nuxt": "^12.8.2",
     "nuxt": "^3.15.4",
     "vue": "latest"
   },
@@ -30,6 +33,7 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "better-sqlite3",
       "esbuild",
       "sharp",
       "vue-demi"
