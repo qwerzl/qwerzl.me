@@ -7,8 +7,8 @@ export default defineContentConfig({
       type: 'page',
       schema: z.object({
         title: z.string(),
-        date: z.date()
-      })
-    })
-  }
+        date: z.date(),
+      }),
+    }),
+  },
 })

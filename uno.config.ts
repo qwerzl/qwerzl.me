@@ -6,7 +6,7 @@ export default defineConfig({
     fontFamily: {
       serif: 'Newsreader',
       sans: 'Inter',
-      mono: 'IBM Plex Mono'
+      mono: 'IBM Plex Mono',
     },
     colors: {
       border: 'hsl(var(--border))',
@@ -52,7 +52,7 @@ export default defineConfig({
   },
   presets: [
     presetWind3(),
-    presetAnimations()
+    presetAnimations(),
   ],
   transformers: [
     transformerDirectives(),

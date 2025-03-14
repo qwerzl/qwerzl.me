@@ -6,4 +6,7 @@ export default antfu({
   ignores: [
     'app/components/shadcn/',
   ],
+  typescript: {
+    tsconfigPath: 'tsconfig.json',
+  },
 })

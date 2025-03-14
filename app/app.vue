@@ -2,7 +2,6 @@
 import '@unocss/reset/tailwind-compat.css'
 import '@/assets/css/index.css'
 
-
 // Adds .dark to html
 const isDark = usePreferredDark()
 onMounted(() => {

@@ -24,42 +24,48 @@ useHead({
               Student, Developer, Nuxt.js Ecosystem Member.
             </p>
             <p class="mt-2">
-              Find me on 
-              <NuxtLink to="https://github.com/qwerzl" external target="none">GitHub</NuxtLink>, 
-              <NuxtLink to="https://bsky.app/profile/qwerzl.me" external target="none">Bluesky</NuxtLink> 
-              or <NuxtLink to="mailto:me@qwerzl.me" external target="none">me@qwerzl.me</NuxtLink>.
+              Find me on
+              <NuxtLink to="https://github.com/qwerzl" external target="none">
+                GitHub
+              </NuxtLink>,
+              <NuxtLink to="https://bsky.app/profile/qwerzl.me" external target="none">
+                Bluesky
+              </NuxtLink>
+              or <NuxtLink to="mailto:me@qwerzl.me" external target="none">
+                me@qwerzl.me
+              </NuxtLink>.
             </p>
           </div>
         </div>
       </div>
       <div class="relative left-1/2 grid mt-12 -translate-x-1/2">
-        <!-- Left/Right Arrows-->
+        <!-- Left/Right Arrows -->
         <div class="min-[68rem]:hidden">
-          <Icon name="material-symbols:chevron-left" class="absolute left-2 top-1/2 z-50 border rounded-full" @click="homepageBlocks?.scrollBy({left: -320, behavior: 'smooth'})" />
-          <Icon name="material-symbols:chevron-right" class="absolute right-2 top-1/2 z-50 border rounded-full" @click="homepageBlocks?.scrollBy({left: 320, behavior: 'smooth'})" />
+          <Icon name="material-symbols:chevron-left" class="absolute left-2 top-1/2 z-50 border rounded-full" @click="homepageBlocks?.scrollBy({ left: -320, behavior: 'smooth' })" />
+          <Icon name="material-symbols:chevron-right" class="absolute right-2 top-1/2 z-50 border rounded-full" @click="homepageBlocks?.scrollBy({ left: 320, behavior: 'smooth' })" />
         </div>
         <div class="scroll-area h-full w-screen flex justify-center overflow-x-hidden">
           <div
-            class="no-scrollbar h-full flex snap-x overflow-x-scroll px-1/3 space-x-8 min-[68rem]:px-0" 
-            ref="homepageBlocks" 
-            data-animate 
+            ref="homepageBlocks"
+            class="no-scrollbar h-full flex snap-x overflow-x-scroll px-1/3 space-x-8 min-[68rem]:px-0"
+            data-animate
             style="--stagger: 2;"
           >
             <HomepageBlock
-              title="researches" 
+              title="researches"
               class="snap-center"
             />
             <HomepageBlock
-              title="projects" 
+              title="projects"
               class="snap-center"
               :items="[
                 { title: 'Nuxt Fonts', description: 'Plug-and-play fonts optimization for Nuxt apps.', link: 'https://github.com/nuxt/fonts' },
-                { title: 'unifont', description: 'Framework agnostic tools for accessing data from font CDNs and providers', link: 'https://github.com/unjs/unifont' }
-              ]" 
+                { title: 'unifont', description: 'Framework agnostic tools for accessing data from font CDNs and providers', link: 'https://github.com/unjs/unifont' },
+              ]"
               more-url="https://github.com/qwerzl"
             />
             <HomepageBlock
-              title="posts" 
+              title="posts"
               class="snap-center"
             />
           </div>
@@ -109,7 +115,7 @@ useHead({
   scrollbar-width: none;
 }
 
-a {
+/* a {
   @apply underline duration-240 decoration-foreground/40 hover:decoration-foreground underline-offset-2;
-}
+} */
 </style>

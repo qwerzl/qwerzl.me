@@ -23,17 +23,19 @@ const props = defineProps<{
         <div v-if="props.items === undefined" class="h-full flex select-none items-center justify-center text-foreground/70">
           <div><em>Coming soon...</em></div>
         </div>
-        <div v-for="item in props.items" :key="item.title" v-else>
-          <NuxtLink :to="item.link" external target="none">{{ item.title }}</NuxtLink>
+        <div v-for="item in props.items" v-else :key="item.title">
+          <NuxtLink :to="item.link" external target="none">
+            {{ item.title }}
+          </NuxtLink>
           <div class="text-sm opacity-60">
             {{ item.description }}
           </div>
         </div>
         <div class="text-foreground/50">
-          <NuxtLink 
-            class="select-none text-xs text-foreground/50 hover:text-foreground"
-            :to="props.moreUrl" 
+          <NuxtLink
             v-if="props.moreUrl"
+            class="select-none text-xs text-foreground/50 hover:text-foreground"
+            :to="props.moreUrl"
           >
             <em>view more...</em>
           </NuxtLink>
