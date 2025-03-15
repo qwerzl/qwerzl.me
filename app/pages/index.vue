@@ -16,10 +16,10 @@ useHead({
     <div class="w-full">
       <div class="w-full flex justify-center px-6">
         <div>
-          <div class="select-none" data-animate style="--stagger: 0;">
+          <div class="data-animate select-none" style="--stagger: 0;">
             <em>Tom Tang</em>
           </div>
-          <div class="mt-12" data-animate style="--stagger: 1;">
+          <div class="data-animate mt-12" style="--stagger: 1;">
             <p>
               Student, Developer, Nuxt.js Ecosystem Member.
             </p>
@@ -47,8 +47,7 @@ useHead({
         <div class="scroll-area h-full w-screen flex justify-center overflow-x-hidden">
           <div
             ref="homepageBlocks"
-            class="no-scrollbar h-full flex snap-x overflow-x-scroll px-1/3 space-x-8 min-[68rem]:px-0"
-            data-animate
+            class="no-scrollbar data-animate h-full flex snap-x overflow-x-scroll px-1/3 space-x-8 min-[68rem]:px-0"
             style="--stagger: 2;"
           >
             <HomepageBlock
@@ -76,16 +75,6 @@ useHead({
 </template>
 
 <style scoped>
-.scroll-area {
-  --scrollbar-padding: 40px;
-  --scrollbar-size: 6px;
-  --gradient-size-start: var(--body-margin-left);
-  --gradient-size-end: var(--body-margin-right);
-  --body-margin-left: max(60px,env(safe-area-inset-left));
-  --body-margin-right: max(60px,env(safe-area-inset-right));
-  -webkit-mask-image: linear-gradient(to right,transparent 0,#000 var(--gradient-size-start),#000 calc(100% - var(--gradient-size-end)),transparent 100%);
-  mask-image: linear-gradient(to right,transparent 0,#000 var(--gradient-size-start),#000 calc(100% - var(--gradient-size-end)),transparent 100%);
-}
 
 @keyframes enter {
   0% {
@@ -98,24 +87,35 @@ useHead({
   }
 }
 
-[data-animate] {
-  animation: enter .6s both;
-  animation-delay: calc(var(--stagger) * var(--delay) + var(--start));
-  --stagger: 0;
-  --delay: 120ms;
-  --start: 150ms;
+@layer utilities {
+  .data-animate {
+    animation: enter .6s both;
+    animation-delay: calc(var(--stagger) * var(--delay) + var(--start));
+    --stagger: 0;
+    --delay: 120ms;
+    --start: 150ms;
+  }
+  .scroll-area {
+    --scrollbar-padding: 40px;
+    --scrollbar-size: 6px;
+    --gradient-size-start: var(--body-margin-left);
+    --gradient-size-end: var(--body-margin-right);
+    --body-margin-left: max(60px,env(safe-area-inset-left));
+    --body-margin-right: max(60px,env(safe-area-inset-right));
+    -webkit-mask-image: linear-gradient(to right,transparent 0,#000 var(--gradient-size-start),#000 calc(100% - var(--gradient-size-end)),transparent 100%);
+    mask-image: linear-gradient(to right,transparent 0,#000 var(--gradient-size-start),#000 calc(100% - var(--gradient-size-end)),transparent 100%);
+  }
 }
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-/* a {
+a {
   @apply underline duration-240 decoration-foreground/40 hover:decoration-foreground underline-offset-2;
-} */
+}
 </style>
