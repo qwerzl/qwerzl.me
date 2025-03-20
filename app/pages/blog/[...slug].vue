@@ -6,11 +6,13 @@ const { data: page } = await useAsyncData(route.path, () => {
 </script>
 
 <template>
-  <div class="mt-80 w-full flex justify-center px-10">
-    <div v-if="page" class="prose">
+  <div class="w-full flex justify-center px-10">
+    <div v-if="page" class="prose mt-80">
       <div class="flex items-start">
-        <div class="relative mt-0.2 h-min w-10 flex text-sm opacity-80 -left-30 space-x-0.5">
-          <Icon name="material-symbols:arrow-insert" class="mt-0.5 flex-none" />
+        <div class="relative h-min w-10 flex text-sm opacity-80 -left-4 -top-10 min-[990px]:top-0 min-[990px]:mt-0.2 space-x-0.5 min-[990px]:-left-30">
+          <div class="h-min bg-foreground text-background">
+            <Icon name="material-symbols:arrow-insert" class="mt-0.5 flex-none" />
+          </div>
           <NuxtLink to="../" class="text-[17px] leading-normal font-serif italic">
             Back
           </NuxtLink>
@@ -28,7 +30,7 @@ const { data: page } = await useAsyncData(route.path, () => {
           </div>
         </div>
       </div>
-      <ContentRenderer class="mt-10 max-w-prose" :value="page" />
+      <ContentRenderer class="mt-10 max-w-prose bg-background" :value="page" />
     </div>
     <template v-else>
       <div class="empty-page">
@@ -40,4 +42,5 @@ const { data: page } = await useAsyncData(route.path, () => {
       </div>
     </template>
   </div>
+  <NuxtIsland name="PageFooter" class="mt-10 w-screen" />
 </template>
