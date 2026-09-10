@@ -18,7 +18,7 @@
     "@nuxt/image": "^1.10.0",
     "@vueuse/core": "^13.0.0",
     "@vueuse/nuxt": "^13.0.0",
-    "nuxt": "^3.16.1",
+    "nuxt": "^3.21.11",
     "vue": "latest"
   },
   "devDependencies": {
